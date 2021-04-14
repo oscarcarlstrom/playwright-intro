@@ -4,8 +4,9 @@
   "description": "Examples of how to use playwright, and playwright with Jest",
   "main": "index.js",
   "scripts": {
-    "test": "test",
-    "format": "prettier --write ."
+    "test": "npm run test:vanilla && npm run test:browsers",
+    "test:vanilla": "echo 'Jonas should have done this :('",
+    "test:browsers": "jest --testPathPattern=tests/jest-playwright"
   },
   "repository": {
     "type": "git",
@@ -17,7 +18,14 @@
     "url": "https://github.com/oscarcarlstrom/playwright-intro/issues"
   },
   "homepage": "https://github.com/oscarcarlstrom/playwright-intro#readme",
-  "dependencies": {
-    "prettier": "^2.2.1"
+  "engines": {
+    "node": "^14.15.0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.22",
+    "jest": "^26.6.3",
+    "jest-playwright-preset": "^1.5.1",
+    "playwright": "^1.10.0"
   }
 }
