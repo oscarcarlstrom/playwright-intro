@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test:vanilla && npm run test:browsers",
     "test:vanilla": "echo 'Jonas should have done this :('",
-    "test:browsers": "jest --testPathPattern=tests/jest-playwright"
+    "test:browsers": "jest --watchAll"
   },
   "repository": {
     "type": "git",

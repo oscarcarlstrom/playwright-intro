@@ -11,3 +11,10 @@ test('Should have a good slogan', async () => {
   await expect(page).toHaveSelector('"Vi går foran og bygger fremtidens samfunn"');
   await expect(page).toHaveSelector('text=Vi går foran og bygger fremtidens samfunn');
 });
+
+test('Should be possible to search', async () => {
+  await page.click('"Søk"');
+  const inputSelector = '#js-globalglobalSearchFlip';
+  await page.fill(inputSelector, 'Bouvet One');
+  await page.press(inputSelector, 'Enter');
+});
