@@ -4,7 +4,8 @@
   "description": "Examples of how to use playwright, and playwright with Jest",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "format": "prettier --write ."
   },
   "repository": {
     "type": "git",
