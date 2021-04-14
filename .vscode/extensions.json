@@ -1,0 +1,4 @@
+{
+  "recommendations": ["esbenp.prettier-vscode", "pkief.material-icon-theme"],
+  "unwantedRecommendations": []
+}

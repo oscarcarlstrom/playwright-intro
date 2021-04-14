@@ -1,0 +1,22 @@
+{
+  "name": "playwright-intro",
+  "version": "1.0.0",
+  "description": "Examples of how to use playwright, and playwright with Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oscarcarlstrom/playwright-intro.git"
+  },
+  "author": "Oscar Carlström, Jonas Dahlen Svendsen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oscarcarlstrom/playwright-intro/issues"
+  },
+  "homepage": "https://github.com/oscarcarlstrom/playwright-intro#readme",
+  "dependencies": {
+    "prettier": "^2.2.1"
+  }
+}
