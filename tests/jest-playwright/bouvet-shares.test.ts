@@ -1,4 +1,4 @@
-jest.setTimeout(180 * 1000);
+jest.setTimeout(30 * 1000);
 
 beforeAll(async () => {
   await page.goto('https://bouvet.no/bouvet-deler');
