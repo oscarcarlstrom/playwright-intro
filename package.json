@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run test:vanilla && npm run test:browsers",
     "test:vanilla": "echo 'Jonas should have done this :('",
-    "test:jest-playwright": "jest --watchAll",
+    "test:jest-playwright": "jest --watch",
     "test:browsers": "npx folio --config=playwright-test-runner.config.ts"
   },
   "repository": {
