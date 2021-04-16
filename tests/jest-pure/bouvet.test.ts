@@ -1,23 +1,27 @@
-import { Browser, chromium, Page } from 'playwright';
+import { Browser, chromium, firefox, Page, webkit } from 'playwright';
 
-let browser: Browser;
-let page: Page;
-beforeAll(async () => {
-  browser = await chromium.launch();
-  page = await browser.newPage();
-  await page.goto('https://www.bouvet.no/');
-});
+[chromium, firefox, webkit].forEach((browser) => {
+  let launchedBrowser: Browser;
+  let page: Page;
+  beforeAll(async () => {
+    launchedBrowser = await browser.launch();
+    page = await launchedBrowser.newPage();
+    await page.goto('https://www.bouvet.no/');
+  });
 
-afterAll(async () => {
-  await browser.close();
-});
+  afterAll(async () => {
+    await launchedBrowser.close();
+  });
 
-test('Should have the correct title', async () => {
-  const title = await page.title();
-  expect(title).toBe('Bouvet Norge');
-});
+  describe(`${browser.name()}`, () => {
+    it('Should have the correct title', async () => {
+      const title = await page.title();
+      expect(title).toBe('Bouvet Norge');
+    });
 
-test('Should have a good slogan', async () => {
-  const text = await page.waitForSelector('"Vi går foran og bygger fremtidens samfunn"');
-  await expect(text).toBeTruthy();
+    it('Should have a good slogan', async () => {
+      const text = await page.waitForSelector('"Vi går foran og bygger fremtidens samfunn"');
+      expect(text).toBeTruthy();
+    });
+  });
 });
