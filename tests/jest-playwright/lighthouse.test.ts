@@ -17,9 +17,10 @@ test('should pass lighthouse audit', async () => {
       pwa: 80,
     },
     reports: {
-      html: true,
+      formats: {
+        html: true,
+      },
+      directory: 'lighthouse/jest-playwright',
     },
-    name: 'lighthouse-report',
-    directory: 'tests/jest-playwright',
   });
 });

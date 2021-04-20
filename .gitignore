@@ -4,6 +4,7 @@
 # testing
 /coverage
 screenshots/
+lighthouse/
 
 # misc
 .DS_Store
