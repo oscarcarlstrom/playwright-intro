@@ -6,6 +6,7 @@
   "scripts": {
     "test:vanilla": "echo 'Jonas should have done this :('",
     "test:jest": "jest --watch",
+    "test:layout": "jest screenshots",
     "test:jest-playwright": "CONFIG=playwright jest --watch",
     "test:playwright-test": "npx folio --config=playwright-test-runner.config.ts"
   },

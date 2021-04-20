@@ -16,3 +16,14 @@ export async function launchBrowser(
 export async function closeBrowser(launchedBrowser: Browser) {
   await launchedBrowser.close();
 }
+
+export const viewportSizes = [
+  {
+    width: 1200,
+    height: 2750,
+  },
+  {
+    width: 800,
+    height: 3250,
+  },
+];
