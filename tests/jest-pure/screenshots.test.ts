@@ -21,7 +21,7 @@ async function takeScreenshot(page: Page, viewportSize: ViewportSize, browserNam
   );
 }
 
-const screenshotRootPath = `${__dirname}/screenshots`;
+const screenshotRootPath = `test-results/screenshots/layout`;
 let benchMarkScreenshots = [] as PNGWithMetadata[];
 beforeAll(async () => {
   if (fs.existsSync(screenshotRootPath)) {

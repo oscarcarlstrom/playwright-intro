@@ -1,6 +1,6 @@
 import { playAudit } from 'playwright-lighthouse';
 import { chromium, Browser, Page } from 'playwright';
-import { lighthousePort } from '../../constants';
+import { lighthousePort, lighthouseReportDir } from '../../constants';
 
 jest.setTimeout(60 * 1000);
 
@@ -34,7 +34,7 @@ test('should pass lighthouse audit', async () => {
       formats: {
         html: true,
       },
-      directory: 'lighthouse/jest-pure',
+      directory: `${lighthouseReportDir}/jest-pure`,
     },
   });
 });
