@@ -24,11 +24,11 @@ test('should pass lighthouse audit', async () => {
     page: page,
     port: lighthousePort,
     thresholds: {
-      performance: 80,
-      accessibility: 80,
-      'best-practices': 80,
-      seo: 80,
-      pwa: 80,
+      performance: 90,
+      accessibility: 90,
+      'best-practices': 90,
+      seo: 90,
+      pwa: 90,
     },
     reports: {
       formats: {
