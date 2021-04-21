@@ -29,10 +29,18 @@ beforeAll(async () => {
   }
 
   const { launchedBrowser, page } = await launchBrowser(url, devBrowser);
+  // A 'for of' loop is essential here (can't use forEach, since that requires an async callback)
   for (const viewportSize of viewportSizes) {
     const screenshot = await takeScreenshot(page, viewportSize, devBrowser.name());
     benchMarkScreenshots.push(screenshot);
   }
+  // Alternative (using map):
+  // await Promise.all(
+  //   viewportSizes.map(async (viewportSize) => {
+  //     const screenshot = await takeScreenshot(page, viewportSize, devBrowser.name());
+  //     benchMarkScreenshots.push(screenshot);
+  //   })
+  // );
   await closeBrowser(launchedBrowser);
 });
 
